@@ -1,0 +1,18 @@
+from gtts import gTTS
+import os
+
+text = "कैसा लगा आपको मेरा प्रोजेक्ट"
+
+
+language = 'hi'
+
+# Slow speed of voice
+speed = False
+
+# Initialize the TTS engine
+tts = gTTS(text=text, lang=language, slow=speed)
+# Save the voice to an MP3 file
+tts.save("output100.mp3")
+
+# Play the MP3 file
+os.system("start output100.mp3")
